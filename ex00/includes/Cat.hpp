@@ -7,9 +7,10 @@ class Cat : public Animal
 private:
 public:
     Cat(void);
-    ~Cat(void);
+    virtual ~Cat(void);
     Cat(const Cat &src);
     Cat &operator=(const Cat &rhs);
+    void makeSound(void) const;
 };
 
 #endif

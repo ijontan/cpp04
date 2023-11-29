@@ -6,11 +6,11 @@
 #    By: itan <itan@student.42kl.edu.my>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/18 20:55:16 by itan              #+#    #+#              #
-#    Updated: 2023/11/29 13:00:45 by itan             ###   ########.fr        #
+#    Updated: 2023/11/29 21:38:29 by itan             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME	= DiamondTrap
+NAME	= Animal
 
 # ** main src ** #
 SRC_DIR	= src
