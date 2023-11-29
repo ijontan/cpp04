@@ -1,0 +1,10 @@
+*.o
+*.DSYM
+debug.out
+d.out
+
+
+ClapTrap
+ScavTrap
+FragTrap
+DiamondTrap
