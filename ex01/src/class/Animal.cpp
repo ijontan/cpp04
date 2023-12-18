@@ -18,8 +18,3 @@ Animal &Animal::operator=(const Animal &rhs)
 Animal::~Animal(void)
 {
 }
-
-void Animal::makeSound(void) const
-{
-    std::cout << "Animal sound" << std::endl;
-}

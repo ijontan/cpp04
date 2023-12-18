@@ -14,7 +14,7 @@ public:
     ~Animal(void);
     Animal(const Animal &src);
     Animal &operator=(const Animal &rhs);
-    virtual void makeSound(void) const;
+    virtual void makeSound(void) const = 0;
 };
 
 #endif
