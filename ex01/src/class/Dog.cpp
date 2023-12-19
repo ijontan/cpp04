@@ -3,6 +3,7 @@
 Dog::Dog(void) : Animal()
 {
     type = "Dog";
+    brain = new Brain();
 }
 
 Dog::Dog(const Dog &src) : Animal(src)
@@ -18,6 +19,7 @@ Dog &Dog::operator=(const Dog &rhs)
 
 Dog::~Dog(void)
 {
+    delete brain;
 }
 
 void Dog::makeSound(void) const

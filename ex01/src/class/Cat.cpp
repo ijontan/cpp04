@@ -3,6 +3,7 @@
 Cat::Cat(void) : Animal()
 {
     type = "Cat";
+    brain = new Brain();
 }
 
 Cat::Cat(const Cat &src) : Animal(src)
@@ -18,6 +19,7 @@ Cat &Cat::operator=(const Cat &rhs)
 
 Cat::~Cat(void)
 {
+    delete brain;
 }
 
 void Cat::makeSound(void) const
