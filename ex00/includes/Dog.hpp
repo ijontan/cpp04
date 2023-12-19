@@ -12,6 +12,7 @@ public:
     Dog(const Dog &src);
     Dog &operator=(const Dog &rhs);
     void makeSound(void) const;
+    std::string getType(void) const;
 };
 
 #endif

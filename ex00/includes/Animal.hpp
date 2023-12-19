@@ -14,7 +14,8 @@ public:
     ~Animal(void);
     Animal(const Animal &src);
     Animal &operator=(const Animal &rhs);
-    virtual void makeSound(void) const = 0;
+    virtual void makeSound(void) const;
+    virtual std::string getType(void) const;
 };
 
 #endif

@@ -11,6 +11,7 @@ public:
     Cat(const Cat &src);
     Cat &operator=(const Cat &rhs);
     void makeSound(void) const;
+    std::string getType(void) const;
 };
 
 #endif
