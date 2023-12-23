@@ -7,8 +7,14 @@
 
 class ICharacter
 {
+protected:
+    AMateria *_material[4];
+
 public:
-    virtual ~ICharacter() {}
+    ICharacter(void);
+    ICharacter(const ICharacter &src);
+    ICharacter &operator=(const ICharacter &rhs);
+    virtual ~ICharacter();
     virtual std::string const &getName() const = 0;
     virtual void equip(AMateria *m) = 0;
     virtual void unequip(int idx) = 0;
