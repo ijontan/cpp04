@@ -1,18 +1,19 @@
 
 #include "Cure.hpp"
+#include "ICharacter.hpp"
 
 Cure::Cure(void) : AMateria("cure")
 {
 }
 
-Cure::Cure(const Cure &src)
+Cure::Cure(const Cure &src) : AMateria("cure")
 {
     *this = src;
 }
 
 Cure &Cure::operator=(const Cure &rhs)
 {
-    *this = rhs;
+    (void)rhs;
     return *this;
 }
 

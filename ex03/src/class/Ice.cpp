@@ -1,17 +1,19 @@
 
 #include "Ice.hpp"
+#include "ICharacter.hpp"
 
 Ice::Ice(void) : AMateria("ice")
 {
 }
 
-Ice::Ice(const Ice &src)
+Ice::Ice(const Ice &src) : AMateria("ice")
 {
     *this = src;
 }
 
 Ice &Ice::operator=(const Ice &rhs)
 {
+    (void)rhs;
     return *this;
 }
 

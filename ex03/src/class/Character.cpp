@@ -1,13 +1,19 @@
 
 #include "Character.hpp"
+#include "AMateria.hpp"
 
 Character::Character(void) : ICharacter()
 {
 }
 
-Character::Character(const Character &src)
+Character::Character(const Character &src) : ICharacter()
 {
     *this = src;
+}
+
+Character::Character(std::string name) : ICharacter()
+{
+    _name = name;
 }
 
 Character &Character::operator=(const Character &rhs)
@@ -18,6 +24,11 @@ Character &Character::operator=(const Character &rhs)
 
 Character::~Character(void)
 {
+    for (size_t i = 0; i < 4; i++)
+    {
+        if (_material[i] != NULL)
+            delete _material[i];
+    }
 }
 
 void Character::equip(AMateria *m)
@@ -44,4 +55,9 @@ void Character::use(int idx, ICharacter &target)
     if (idx < 0 || idx > 3)
         return;
     _material[idx]->use(target);
+}
+
+std::string const &Character::getName() const
+{
+    return _name;
 }
