@@ -6,13 +6,13 @@ Brain::Brain(void)
 
 Brain::Brain(const Brain &src)
 {
-    *this = src;
+	*this = src;
 }
 
 Brain &Brain::operator=(const Brain &rhs)
 {
-    (void)rhs;
-    return *this;
+	(void)rhs;
+	return *this;
 }
 
 Brain::~Brain(void)

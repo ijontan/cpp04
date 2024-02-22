@@ -6,11 +6,11 @@ IMateriaSource::IMateriaSource(void)
 
 IMateriaSource::IMateriaSource(const IMateriaSource &src)
 {
-    *this = src;
+	*this = src;
 }
 
 IMateriaSource &IMateriaSource::operator=(const IMateriaSource &rhs)
 {
-    *this = rhs;
-    return *this;
+	(void)rhs;
+	return *this;
 }
