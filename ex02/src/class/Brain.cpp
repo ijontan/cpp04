@@ -12,10 +12,13 @@ Brain::Brain(const Brain &src)
 
 Brain &Brain::operator=(const Brain &rhs)
 {
+	if (this == &rhs)
+		return *this;
 	for (int i = 0; i < 100; i++)
 	{
 		ideas[i] = rhs.ideas[i];
 	}
+	size = rhs.size;
 	return *this;
 }
 

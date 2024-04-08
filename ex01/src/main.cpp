@@ -8,6 +8,7 @@ int main()
 	Cat cat;
 	cat.inspired("omg!!");
 	Cat cat2 = cat;
+	// cat2 = cat;
 	cat2.makeSound();
 	cat.makeSound();
 

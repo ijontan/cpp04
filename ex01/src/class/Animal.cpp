@@ -11,7 +11,8 @@ Animal::Animal(const Animal &src)
 
 Animal &Animal::operator=(const Animal &rhs)
 {
-	(void)rhs;
+	if (this != &rhs)
+		type = rhs.getType();
 	return *this;
 }
 

@@ -1,4 +1,5 @@
 #include "Dog.hpp"
+#include "Brain.hpp"
 
 Dog::Dog(void) : Animal()
 {
@@ -8,12 +9,15 @@ Dog::Dog(void) : Animal()
 
 Dog::Dog(const Dog &src) : Animal(src)
 {
+	brain = new Brain();
 	*this = src;
 }
 
 Dog &Dog::operator=(const Dog &rhs)
 {
-	(void)rhs;
+	if (this == &rhs)
+		return *this;
+	*this->brain = *rhs.brain;
 	return *this;
 }
 
