@@ -8,11 +8,14 @@ class Brain
 {
 private:
 	std::string ideas[100];
+	int size;
 
 public:
 	Brain(void);
 	~Brain(void);
 	Brain(const Brain &src);
+	void newIdea(std::string idea);
+	std::string getIdea();
 	Brain &operator=(const Brain &rhs);
 };
 

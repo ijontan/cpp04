@@ -1,4 +1,5 @@
 #include "Cat.hpp"
+#include "Brain.hpp"
 
 Cat::Cat(void) : Animal()
 {
@@ -13,7 +14,9 @@ Cat::Cat(const Cat &src) : Animal(src)
 
 Cat &Cat::operator=(const Cat &rhs)
 {
-	(void)rhs;
+	if(!brain)
+		brain = new Brain();
+	*this->brain = *rhs.brain;
 	return *this;
 }
 
@@ -25,9 +28,16 @@ Cat::~Cat(void)
 void Cat::makeSound(void) const
 {
 	std::cout << "Meow" << std::endl;
+	std::cout << brain->getIdea() << std::endl;
+	std::cout << brain << std::endl;
 }
 
 std::string Cat::getType(void) const
 {
 	return type;
+}
+
+void Cat::inspired(std::string inspiration)
+{
+	brain->newIdea(inspiration);
 }

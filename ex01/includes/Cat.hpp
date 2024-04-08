@@ -3,6 +3,7 @@
 
 #include "Animal.hpp"
 #include "Brain.hpp"
+#include <string>
 
 class Cat : public Animal
 {
@@ -16,6 +17,7 @@ public:
 	Cat &operator=(const Cat &rhs);
 	void makeSound(void) const;
 	std::string getType(void) const;
+	void inspired(std::string inspiration);
 };
 
 #endif

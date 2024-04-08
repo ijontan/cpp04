@@ -5,6 +5,11 @@
 int main()
 {
 	Animal *array[20];
+	Cat cat;
+	cat.inspired("omg!!");
+	Cat cat2 = cat;
+	cat2.makeSound();
+	cat.makeSound();
 
 	for (int i = 0; i < 10; i++)
 		array[i] = new Cat();

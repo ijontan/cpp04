@@ -1,6 +1,7 @@
 
 #include "Character.hpp"
 #include "AMateria.hpp"
+#include "MateriaSource.hpp"
 
 Character::Character(void) : ICharacter()
 {
@@ -19,6 +20,12 @@ Character::Character(std::string name) : ICharacter()
 Character &Character::operator=(const Character &rhs)
 {
 	this->_name = rhs.getName();
+	for (size_t i = 0; i < 4; i++)
+		if (_material[i] != NULL)
+			delete _material[i];
+	for (size_t i = 0; i < 4; i++)
+		if (rhs._material[i] != NULL)
+			_material[i] = rhs._material[i]->clone();
 	return *this;
 }
 
